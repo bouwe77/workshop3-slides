@@ -13,20 +13,11 @@ import MyConfetti from "./components/MyConfetti"
 
 # INTRODUCING...
 
-my twitter clone <a href="https://9ozk2orqyo.codesandbox.io" target="_blank">nitwit</a> :)
+a <a href="https://9ozk2orqyo.codesandbox.io" target="_blank">twitter clone</a> :)
 
 ---
 
-# REACT
-
-<ul>
-  <li>UI components<br/><br/></li>
-  <Appear>
-    <li>Library<br/><br/></li>
-    <li>Open source<br/><br/></li>
-    <li>Functional & declarative programming</li>
-  </Appear>
-</ul>
+# REACT?
 
 ---
 
@@ -44,28 +35,15 @@ my twitter clone <a href="https://9ozk2orqyo.codesandbox.io" target="_blank">nit
 
 ---
 
-# COMPONENTS
-
-<ul>
-  <li>Plain javascript functions<br/><br/></li>
-  <Appear>
-    <li>Always render (return) a piece of UI<br/><br/></li>
-    <li>Mixing technologies: JSX<br/><br/></li>
-    <li>Keep them small and simple!</li>
-  </Appear>
-</ul>
-
----
-
 # EXAMPLE
 
-Hello World component
+- Hello World component
 
----
 
-# EXAMPLE
+- Multiple components
 
-Multiple components
+
+- JSX
 
 ---
 
@@ -120,14 +98,7 @@ https://bouwe.io
 
 # PROPS
 
-<ul>
-  <li>Passing data between components<br/><br/></li>
-  <li>From parent to child<br/><br/></li>
-  <Appear>
-    <li>Parent passes one or more values to child<br/><br/></li>
-    <li>Child receives all values as one props object<br/><br/></li>
-  </Appear>
-</ul>
+Passing data between components from **parent to child**
 
 ---
 
@@ -140,7 +111,7 @@ Props
 # EXERCISE (1/2)
 
 <ol>
-  <li>In the <u>App</u> component, define an <b>array of post objects</b><br/><br/></li>
+  <li>In the <u>App</u> component, define an <b>array of post objects (example below)</b><br/><br/></li>
 
   <li>Add some random post objects to the array.<br/>Each post object contains a <b>username</b> and <b>content</b>.<br/><br/></li>
  
@@ -167,71 +138,14 @@ const posts = [
 </ol>
 
 ```
-props.posts.map(post => <Post post={post} />)
+{props.posts.map(post => <Post post={post} />)}
 ```
 
 ---
 
 # STATE
 
-<ul>
-<li>Makes your components dynamic<br/><br/></li>
-<li>Data to display, also when it changes<br/><br/></li>
-  <Appear>
-    <li>Multiple components can have their own part of state<br/><br/></li>
-    <li>Which component has which part of the state?<br/><br/></li>
-    <li>Initialize state with React's <b>useState</b> hook<br/><br/></li>
-  </Appear>
-</ul>
-
----
-
-# EXAMPLE
-
-- Set initial state with useState
-
-
-- Pass state as props to a child component
-
----
-
-# EXERCISE
-
-<ol>
-  <li>Initialize a new posts array by calling useState<br/><br/></li>
-
-  <li>Pass the hard-coded posts array we made earlier <br/>as initial state to useState<br/> <i>(note we'll get rid of this initial state soon)</i><br/><br/></li>
-
-  <li>Need a hint...?</li>
-</ol>
-
-<Appear>
-  <code>
-    const initialPosts = [ yada yada ]
-    <br/>
-    const [posts, setPosts] = useState(initialPosts)
-  </code>
-</Appear>
-
----
-
-# CHANGE STATE
-
-<ul>
-  <li>State change causes a re-render of the<br/>component and all its children<br/><br/></li>
-  <Appear>
-    <li>State is local and private within component<br/><br/></li>
-    <li>One-way data binding<br/><br/></li>
-    <li>
-      Implement events to change state:
-      <ul>
-      <li>User</li>
-      <li>Network</li>
-      <li>Time</li>
-      </ul>
-    </li>
-  </Appear>
-</ul>
+Example code says more than a thousand words... ;)
 
 ---
 
@@ -244,50 +158,45 @@ props.posts.map(post => <Post post={post} />)
 
 ---
 
-# CHANGE STATE
+# STATE
 
-- Use the **set function** that was returned by useState
-
-
-- The set function **replaces** the supplied value into state
+- One way data binding
 
 
-- React may apply state changes in batches to prevent too many unnecessary re-renders
-
----
-
-# EXAMPLE
-
-Changing state with the set function
-
-- Single value
+- Container and presentational components
 
 
-- Array of objects
+- ...
 
 ---
 
-# EXERCISE
+# EXERCISE (1/2)
+
+In the <u>App</u> component we will add posts to state:
 
 <ol>
-<li>Add an addPost(content) function to the <u>App</u> component.<br/><br/></li>
+  <li>Call <b>useState</b> and pass in the hard-coded posts array we made earlier.<br/><br/></li>
+  <li>Make sure you initialize the two variables useState returns.<br/><br/></li>
+  <li>Pass the posts variable useState returns as props to <u>Timeline</u>,<br/>although that already might be the case.<br/><br/></li>
+</ol>
 
-<li>Create a post object containing the provided content<br/>and your first name as hard-coded username.<br/><br/></li>
+---
 
-<li>Call <b>setPosts</b> and provide an array containing<br/> both the new post object and the current posts.<br/><br/></li>
+# EXERCISE (2/2)
 
-<li>For testing purposes, add a dummy button with an onClick<br/>to call the addPost function:</li>
+<ol>
+  <li>Add an addPost(content) function to the <u>App</u> component.<br/><br/></li>
+
+  <li>Create a post object containing the provided content<br/>and your first name as hard-coded username.<br/><br/></li>
+
+  <li>Call <b>setPosts</b> and provide an array containing<br/> both the new post object and the current posts.<br/><br/></li>
+
+  <li>For testing purposes, add a dummy button with an onClick<br/>to call the addPost function:</li>
 </ol>
 
 ```jsx
 <button onClick={() => addPost("Hello World")}>Dummy</button>
 ```
-
----
-
-# OK...
-
-What do we have now?
 
 ---
 
