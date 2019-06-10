@@ -5,15 +5,28 @@ import MyConfetti from "./components/MyConfetti"
 
 # &lt;Welcome /&gt;
 
+WIFI: ...
+
 ---
 
 I am **Bouwe**
 
-- New Nexus
+Software Engineer @ New Nexus
 
-- @bouwe
+<a href="https://bouwe.io">bouwe.io</a>
 
-- bouwe.io
+---
+
+# AND YOU?
+
+```js
+<You>
+  <Name />
+  <Employer />
+  <DailyJob />
+  <React />
+</You>
+```
 
 ---
 
@@ -33,47 +46,45 @@ a <a href="https://9ozk2orqyo.codesandbox.io" target="_blank">twitter clone</a> 
 
 # COMPONENTS
 
-<ul>
-  <li>Pieces of UI (small!)<br/><br/></li>
-  <Appear>
-    <li>Example: <a href="https://twitter.com" target="_blank">twitter</a><br/><br/></li>
-    <li>Parent-child relationship<br/><br/></li>
-    <li>Reuse<br/><br/></li>
-    <li>Single responsibility</li>
-  </Appear>
-</ul>
+Small pieces of UI
+
+---
+
+# COMPONENTS
+
+Example
+
+---
+
+# COMPONENTS
+
+Parent-Child relationships
+
+---
+
+# COMPONENTS
+
+Reusability and Single Responsibility
+
+---
+
+# COMPONENTS
+
+Just javascript functions
+
+that return a piece of UI
 
 ---
 
 # EXAMPLE
 
-- Hello World component
-
-
-- Multiple components
-
-
-- JSX
+Components
 
 ---
 
-# EXERCISE
+# EXERCISE 1
 
-1. Create your own app:
-   - In the browser with [CodeSandbox][]: create-react-app template
-   - or: locally using **create-react-app**
-
-
-2. Create the following component hierarchy:
-
-- App
-  - Header
-  - Timeline
-    - Post (1..n)
-
-[codesandbox]: https://codesandbox.io
-
-https://bouwe.io
+...
 
 ---
 
@@ -85,30 +96,17 @@ PIZZA!!!
 
 ---
 
-# EXERCISE
+# EXERCISE 1
 
-
-1. Create your own app:
-   - In the browser with [CodeSandbox][]: create-react-app template
-   - or: locally using **create-react-app**
-
-
-2. Create the following component hierarchy:
-
-- App
-  - Header
-  - Timeline
-    - Post (1..n)
-
-[codesandbox]: https://codesandbox.io
-
-https://bouwe.io
+...
 
 ---
 
 # PROPS
 
-Passing data between components from **parent to child**
+Passing data between components 
+
+from **parent to child**
 
 ---
 
@@ -118,38 +116,9 @@ Props
 
 ---
 
-# EXERCISE (1/2)
+# EXERCISE 2
 
-<ol>
-  <li>In the <u>App</u> component, define an <b>array of post objects (example below)</b><br/><br/></li>
-
-  <li>Add some random post objects to the array.<br/>Each post object contains a <b>username</b> and <b>content</b>.<br/><br/></li>
- 
-  <li>Pass the array of post objects as props<br/>from <u>App</u> to <u>Timeline</u></li>
-</ol>
-
-```jsx
-const posts = [ 
-  { username: 'Bouwe', content: 'Hello World' }, 
-  { username: 'Bouwe', content: 'My second tweet :)' } ]
-```
-
----
-
-# EXERCISE (2/2)
-
-<ol>
-<li>In the <u>Timeline</u> component, render a <u>Post</u> component for each post<br/>in the posts array using the array.map() function<br/><br/></li>
-
-<li>Pass each post object as props to the <u>Post</u> component<br/><br/></li>
-
-<li>In <u>Post</u>, display the user and content of the post object from props</li>
-
-</ol>
-
-```
-{props.posts.map(post => <Post post={post} />)}
-```
+...
 
 ---
 
@@ -180,33 +149,9 @@ Example code says more than a thousand words... ;)
 
 ---
 
-# EXERCISE (1/2)
+# EXERCISE 3
 
-In the <u>App</u> component we will add posts to state:
-
-<ol>
-  <li>Call <b>useState</b> and pass in the hard-coded posts array we made earlier.<br/><br/></li>
-  <li>Make sure you initialize the two variables useState returns.<br/><br/></li>
-  <li>Pass the posts variable useState returns as props to <u>Timeline</u>,<br/>although that already might be the case.<br/><br/></li>
-</ol>
-
----
-
-# EXERCISE (2/2)
-
-<ol>
-  <li>Add an addPost(content) function to the <u>App</u> component.<br/><br/></li>
-
-  <li>Create a post object containing the provided content<br/>and your first name as hard-coded username.<br/><br/></li>
-
-  <li>Call <b>setPosts</b> and provide an array containing<br/> both the new post object and the current posts.<br/><br/></li>
-
-  <li>For testing purposes, add a dummy button with an onClick<br/>to call the addPost function:</li>
-</ol>
-
-```jsx
-<button onClick={() => addPost("Hello World")}>Dummy</button>
-```
+...
 
 ---
 
@@ -245,36 +190,9 @@ Forms
 
 ---
 
-# EXERCISE (1/2)
+# EXERCISE 4
 
-<ol>
-<li>Create the <b>Compose</b> component and render it<br/> inside the <u>App</u> component<br/><br/></li>
-
-<li>In <u>Compose</u>, add a form with a textarea<br/><br/></li>
-
-<li>Introduce a content variable with useState*<br/><br/></li>
-
-<li>In the textarea, call setContent via the onChange event handler*<br/><br/></li>
-
-</ol>
-
-<i>(* replace steps 3 and 4 by uncontrolled inputs if you prefer)</i>
-
----
-
-# EXERCISE (2/2)
-
-In the <u>App</u> component:
-<ol>
-<li>Pass the addPost function as props to <u>Compose</u><br/><br/></li>
-<li>Remove the dummy button</li>
-</ol>
-
-In the <u>Compose</u> component:
-<ol>
-<li>Add an onSubmit event handler that calls <br/>the addPost function from props and passes the content<br/><br/></li>
-<li>Clear the textarea value after submitting</li>
-</ol>
+...
 
 ---
 
@@ -318,14 +236,9 @@ https://nitwit-api.azurewebsites.net
 
 ---
 
-# EXERCISE
+# EXERCISE 5
 
-<ol>
-  <li>Retrieve timeline:<br/> HTTP GET on /users/<u>:userId</u>/timeline <br/>via the useEffect hook
-  <br/><br/><b>Please don't forget the 2nd argument for useEffect! ;)</b><br/><br/></li>
-  <li>Save post:<br/> HTTP POST on /users/<u>:userId</u>/posts <br/>in the addPost function<br/><br/></li>
-  <li>Note: the <u>:userId</u> is your <b>first name</b></li>
-</ol>
+...
 
 ---
 
@@ -343,19 +256,7 @@ But maybe we have time for the BONUS exercise?
 
 # BONUS EXERCISE
 
-Create components that allow for <br/>**following and unfollowing** other users...
-
-Possible solution:
-
-1. Show all users
-
-2. Indicate per user whether or not you are following him/her
-
-3. Add toggle button per user
-
-4. Toggling the button calls API to follow or unfollow the user
-
-5. Check the API documentation: https://nitwit-api.azurewebsites.net
+...
 
 ---
 
@@ -388,7 +289,7 @@ Possible solution:
 
 - Patterns to prevent "prop drilling":
 
-  _props.children, useContext, etc._
+  _context, Redux, etc._
 
 
 - People:
