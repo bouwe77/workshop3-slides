@@ -5,9 +5,43 @@
 - Open source
 - Functional & declarative programming
 
+# Components
+
+## Conceptueel
+
+Components zijn de bouwblokken van je applicatie en maken het mogelijk de UI in kleine, 
+onafhankelijke en herbruikbare stukjes te verdelen.
+
+***Voorbeeld-website laten zien en aanwijzen***
+
+Waarom is dat?
+
+Een React component heeft alles aan boord: de UI ("html"), eventuele (view) logica, en eventueel "model"
+
+Dat is best veel en daarom is het handig kleine components te maken.
+
+Denk aan voordelen zoals overzichtelijkheid, single responsibility, testbaarheid, herbruikbaarheid.
+
+Alle React components hebben onderling een relatie met elkaar. Dit is een parent-child relatie.
+
+Als je de hele component structuur van je app schematisch weer zou wilen geven dan zie je een boomstructuur.
+
+De parent weet wie zijn children zijn, maar een child weet niet wie zijn parent is.
+
+Dat is een belangrijke reden waarom components herbruikbaar zijn.
+
+Tot zover de conceptuele kant van components, nu gaan we langzaam richting code.
+
+## Concreet
+
+Een React component is gewoon een javascript functie, die altijd UI returned, oftewel hetgeen in de browser getoond wordt.
+
+Die UI lijkt op HTML, maar dat is het niet. Het is JSX, een extensie op javascript waarmee het mogelijk wordt inline in javascript een soortvan HTML te gebruiken.
+
+Deze JSX bevat zowel de markup als eventuele child components.
 
 
-# State uitleg met live coding
+# State (+live coding!)
 
 1. Pak voorbeeld [04] useState
 1. Dit is een App component die een counter toont.
