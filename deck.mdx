@@ -8,13 +8,11 @@ import MyConfetti from "./components/MyConfetti"
 <br/>
 <br/>
 
-```
+<small>
 WIFI:
-
-  Workplace-Guest
-
-  welkom68
-```
+Workplace-Guest
+welkom68
+</small>
 
 ---
 
@@ -38,7 +36,7 @@ Name, Employer, DailyJob, React
 
 # LET'S BUILD...
 
-a <a href="https://9ozk2orqyo.codesandbox.io" target="_blank">twitter clone</a> :)
+a <a href="https://nitwit.netlify.com" target="_blank">twitter clone</a> :)
 
 ---
 
@@ -66,15 +64,23 @@ Reusability and Single Responsibility
 
 # COMPONENTS
 
-Parent-Child relationships
+Parent-Child relationship
 
 ---
 
 # COMPONENTS
 
-Just javascript functions
+A component is just 
 
-that return a piece of UI
+a javascript function
+
+---
+
+# COMPONENTS
+
+Such a function returns
+
+a piece of UI: JSX
 
 ---
 
@@ -84,9 +90,31 @@ Components
 
 ---
 
+# SUMMARY OF THE EXAMPLES
+
+- Component names start with **Capital Letter**
+
+- Use **import/export** if your components are in separate files
+
+- A component **always** returns JSX
+
+- JSX can be both "html" and/or other ```<Components />```
+
+- Javascript expressions in JSX between **curly brackets**:
+
+```js
+function Hello(props) {
+  return <>Hello {props.name}</>
+}
+```
+
+---
+
 # EXERCISE 1
 
 Create your first components
+
+for the twitter clone
 
 https://bouwe.io/workshops/3
 
@@ -103,6 +131,8 @@ PIZZA!!!
 # EXERCISE 1
 
 Create your first components
+
+for the twitter clone
 
 https://bouwe.io/workshops/3
 
@@ -132,7 +162,9 @@ https://bouwe.io/workshops/3
 
 # STATE
 
-Example code says more than a thousand words... ;)
+Example code says more 
+
+than a thousand words... ;)
 
 ---
 
@@ -150,16 +182,16 @@ Example code says more than a thousand words... ;)
 - One way data binding
 
 
-- Container and presentational components
+- Events
 
 
-- ...
+- Dumb components
 
 ---
 
 # EXERCISE 3
 
-Add state to a component
+Add state to a component:
 
 https://bouwe.io/workshops/3
 
@@ -238,7 +270,23 @@ However, it’s all local state… :(
 - Sync state
 
 
-- useEffect hook (DANGER!)
+- useEffect hook
+
+---
+
+**useEffect**
+
+about the 2nd argument...
+
+```
+useEffect(fn)                   // all states (DANGER!)
+useEffect(fn, [])               // no state
+useEffect(fn, [these, states])
+```
+
+> [@ryanflorence]
+
+[@ryanflorence]: https://twitter.com/ryanflorence
 
 ---
 
