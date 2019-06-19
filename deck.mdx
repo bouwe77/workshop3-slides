@@ -26,7 +26,7 @@ Software Engineer @ New Nexus
 
 # AND YOU?
 
-Name, Employer, DailyJob, React
+Name, employer, daily job, React?
 
 ---
 
@@ -100,13 +100,7 @@ Components
 
 - JSX can be both "html" and/or other ```<Components />```
 
-- Javascript expressions in JSX between **curly brackets**:
-
-```js
-function Hello(props) {
-  return <>Hello {props.name}</>
-}
-```
+- Javascript expressions in JSX between **curly brackets**
 
 ---
 
@@ -168,12 +162,12 @@ than a thousand words... ;)
 
 ---
 
-# PROPS & STATE
-
-- Props is data **between** components
-
+# STATE & PROPS
 
 - State is data **within** a component
+
+
+- Props is data **between** components
 
 ---
 
@@ -185,7 +179,7 @@ than a thousand words... ;)
 - Events
 
 
-- Dumb components
+- Re-render !== Repaint
 
 ---
 
@@ -199,25 +193,10 @@ https://bouwe.io/workshops/3
 
 # FORMS
 
-<ul>
-  <li>
-    <b>Uncontrolled</b> inputs
-    <ul>
-      <li>The "Old Skool way"</li>
-      <li>Easier</li>
-    </ul>
-    <br/><br/>
-  </li>
-  <Appear>
-    <li>
-      <b>Controlled</b> inputs:
-      <ul>
-        <li>The "React way": events and state</li>
-        <li>Better UX: interdependent fields, validation, local storage, etc.</li>
-      </ul>
-    </li>
-  </Appear>
-</ul>
+- Uncontrolled inputs: DOM
+
+
+- Controlled inputs: state
 
 ---
 
@@ -276,17 +255,19 @@ However, it’s all local state… :(
 
 **useEffect**
 
-about the 2nd argument...
+If you specify a list of dependencies 
 
-```
-useEffect(fn)                   // all states (DANGER!)
-useEffect(fn, [])               // no state
-useEffect(fn, [these, states])
-```
+as the last argument to useEffect (...)
 
-> [@ryanflorence]
+it must include all values used inside (...).
 
-[@ryanflorence]: https://twitter.com/ryanflorence
+That includes props, state, and anything 
+
+derived from them. 
+
+> [@_SeanGroff]
+
+[@_SeanGroff]: https://twitter.com/@_SeanGroff
 
 ---
 
