@@ -1,3 +1,42 @@
+
+# React
+
+- UI's 
+
+- Library
+
+- Open source
+
+- Functional & declarative programming
+
+# Components
+
+
+# State
+
+
+# Forms
+
+- Uncontrolled inputs: DOM
+
+- Controlled inputs: state
+
+# useEffect
+
+- Components **renderen UI** en **handelen events** af, de rest is **side effects**
+
+- Voorbeelden: 
+    - Initieel inladen data, 
+    - Acties n.a.v. state change, 
+    - DOM manipulaties en
+    - Subscriptions
+
+- useEffect wordt na elke render uitgevoerd, tenzij je een 2e argument meegeeft.
+
+----------------------------------------------------------------------------------------------------------------
+****************************************************************************************************************
+----------------------------------------------------------------------------------------------------------------
+
 # React?
 
 - UI's 
@@ -76,3 +115,18 @@ Nog meer vertellen:
 
 - Controlled = state gebruiken om de ingevulde waardes te kunnen gebruiken.
 - Uncontrolled = waardes uitlezen via de DOM via refs
+
+# useEffect
+
+Wat doet een component:
+1) Render UI via JSX.
+2) Handelt events af (user, time, network)
+3) Handelt side effects af, bijvoorbeeld: 
+    - Zaken die initeel moeten gebeuren
+    - Zaken als gevolg van een state update
+    - DOM/browser manipulaties
+
+Dat zijn **SIDE EFFECTS** en die handel je af met de **useEffect** hook.
+
+Voor nu (en gezien de tijd) gaan wij een useEffect maken die alleen initieel bij het mounten
+van het component wordt uitgevoerd en dat doe je door een lege array als tweede argument mee te geven.
