@@ -14,6 +14,12 @@
 
 # State
 
+- Tekening maken:
+    1) Mount
+    2) Render (in browser, render !== repaint)
+    ---------------
+    4) Update state
+    3) Events (user, time, network)
 
 # Forms
 
