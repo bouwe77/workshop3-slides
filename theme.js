@@ -4,7 +4,9 @@ export default {
   ...theme,
   // custom colors
   colors: {
-    text: '#ffffff',
-    background: '#262626',
+//    text: '#ffffff',
+  //  background: '#262626',
+    background: '#ffffff',
+    text: '#262626',
   },
 }
